@@ -1,0 +1,45 @@
+class Pessoa:
+    nome = 'Nome da Pessoa'
+    idade = 100
+    profissao = None #por nao ter nenhum nome, o programador tornou opcional a opcao
+
+    def __init__(self, nome, idade):
+        self.nome = nome
+        self.idade = idade
+
+    def set_profissao(self, profissao):
+        self.profissao = profissao
+
+class Estudante(Pessoa):
+    
+    def __init__(self, nome, idade):
+        Pessoa.__init__(self, nome, idade) #para garantir que o construtor nao apague o da pessoa
+        self.notas = [] #para obrigar o aluno a ter notas
+
+    def add_notas(self,valor):
+        self.notas.append(valor)
+
+def Media():
+    nota=0
+    tot=0
+    num=0
+    eu = Estudante('Mage', 21)
+    while(nota>=0):
+      nota=float(raw_input("digite a nota: "))
+      if(nota>=0):
+        eu.add_notas(nota)
+        num+=1
+    for i in range(num):
+      tot+=eu.notas[i]
+    return tot/num
+    
+    
+def Aprovado():
+    media = Media()
+    if media>=5:
+        print 'O aluno foi aprovado e a sua media vale: ', round(media, 2)
+    else:
+        print 'O aluno nao foi aprovado e a sua media vale: ', round(media, 2)
+
+
+Aprovado()
