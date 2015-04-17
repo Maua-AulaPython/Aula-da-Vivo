@@ -10,3 +10,7 @@ for i in range(num):
   tot+=notalist[i]
 tot=tot/num
 ptint("a media do aluno e: {0}".format(tot))
+
+
+# Nota: 0
+# Comentario: programa nao executa

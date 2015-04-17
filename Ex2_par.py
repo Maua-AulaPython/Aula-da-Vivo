@@ -6,3 +6,6 @@ def Par(N):
 
 N = int(raw_input('Digite o numero a ser testado: '))
 print(Par(N))
+
+# Nota: 1.0
+# Comentario: bom uso de funcao
