@@ -11,3 +11,6 @@ if (C>A+B):
     print('Nao eh um triangulo!')
 else:
     Verifica(A, B, C)
+
+# Nota: 0.5
+# Algoritmo incorreto na função

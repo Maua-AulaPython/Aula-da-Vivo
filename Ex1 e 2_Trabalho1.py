@@ -20,7 +20,7 @@ def DistanciaEntrePontos (P1):
             if (d>dant):
                 dant = d
     return (dant)
-    
+
 P1 = []
 aux = ''
 while(aux!='fim'):
@@ -29,3 +29,7 @@ while(aux!='fim'):
     P1.append(aux)
 d = DistanciaEntrePontos(P1)
 print ('A maior distancia eh {0}'.format(d))
+
+# Nota 0.0 e 1.0
+# Se você tivesse feito duas funções ao invés de uma levava nota cheia para as
+# duas :(
