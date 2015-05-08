@@ -17,3 +17,6 @@ O segundo ponto eh {2}|{3}'''.format(mod1, teta1, mod2, teta2)
 P1 = raw_input("Digite as coordenadas do primeiro ponto no formato x,y: ")
 P2 = raw_input("Digite as coordenadas do segundo ponto no formato x,y: ")
 Polares(P1, P2)
+
+# Nota: 0.5
+# Era pra calcular as coordenadas do vetor formado entre os dois pontos!
