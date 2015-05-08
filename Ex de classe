@@ -19,27 +19,23 @@ class Estudante(Pessoa):
     def add_notas(self,valor):
         self.notas.append(valor)
 
-def Media():
-    nota=0
-    tot=0
-    num=0
-    eu = Estudante('Mage', 21)
-    while(nota>=0):
-      nota=float(raw_input("digite a nota: "))
-      if(nota>=0):
-        eu.add_notas(nota)
-        num+=1
-    for i in range(num):
-      tot+=eu.notas[i]
-    return tot/num
+    def Media(self):
+        nota=0
+        tot=0
+        num=0
+        while(nota>=0):
+          nota=float(raw_input("digite a nota (digite -1 para sair): "))
+          if(nota>=0):
+            self.add_notas(nota)
+            num+=1
+        for i in range(num):
+          tot+=self.notas[i]
+        return tot/num
+        
     
-    
-def Aprovado():
-    media = Media()
-    if media>=5:
-        print 'O aluno foi aprovado e a sua media vale: ', round(media, 2)
-    else:
-        print 'O aluno nao foi aprovado e a sua media vale: ', round(media, 2)
-
-
-Aprovado()
+    def Aprovado(self):
+        media = self.Media()
+        if media>=5:
+            print 'O aluno(a) {0} foi aprovado e a sua media vale: {1}'.format(self.nome, round(media, 2))
+        else:
+            print 'O aluno(a) {0} nao foi aprovado e a sua media vale: {1}'.format(self.nome, round(media, 2))
