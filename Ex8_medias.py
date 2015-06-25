@@ -28,3 +28,6 @@ if num != 0:
     print "\nO(s) aluno(s) {1} obteve a maior nota: {0}, e a media da sala foi: {2}\n".format(notam, j, round(tot/num, 2))
 else:
     print '\nVoce nao digitou nenhuma nota\n'
+
+#Nota: 1.0
+#Comentario: **
